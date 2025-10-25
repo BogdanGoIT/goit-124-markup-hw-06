@@ -73,10 +73,12 @@ textarea {
 .container {
   margin: 0 auto;
   padding: 0 16px;
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
+  outline: 2px solid red;
+  outline-offset: -2px;
 
-  max-width: 320px;
+  min-width: 320px;
+
+  max-width: 375px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -138,6 +140,20 @@ textarea {
 .team-text,
 .portfolio-text {
   color: #434455;
+}
+
+/* button-close-icon */
+.button-close-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
 
 /* #endregion Common */
@@ -625,16 +641,6 @@ textarea {
 }
 
 .modal-close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
   background-color: #e7e9fc;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -765,3 +771,94 @@ input:checked + label > span {
 }
 
 /* #endregion FormModal */
+
+/* #region Mobile-menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+
+  transform: translateX(100%);
+
+  transition: transform 250ms ease-in-out;
+}
+
+.mobile-menu .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 72px 16px 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu-list {
+  margin-bottom: auto;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-close {
+  background-color: transparent;
+  border: 1px solid #e7e9fc;
+}
+
+.mobile-menu-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  color: #2e2f42;
+}
+
+.mobile-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-contacts-list {
+  margin-bottom: 48px;
+}
+
+.mobile-contact-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: currentColor;
+}
+
+.mobile-contact-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mobile-socials {
+  display: flex;
+  gap: 40px;
+}
+
+.mobile-menu-item:first-child .mobile-menu-link {
+  color: #404bbf;
+}
+
+.mobile-contact-item:first-child .mobile-contact-link {
+  color: #4d5ae5;
+}
+
+@media not (hover: hover) {
+  .mobile-menu-link:active {
+    color: #404bbf;
+  }
+
+  .mobile-contact-link:active {
+    color: #4d5ae5;
+  }
+}
+
+/* #endregion Mobile-menu */
