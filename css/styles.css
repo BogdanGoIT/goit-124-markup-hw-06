@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -67,13 +71,25 @@ textarea {
 }
 
 .container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 0 16px;
   /* outline: 2px solid red;
   outline-offset: -2px; */
+
+  max-width: 320px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
 }
 
 /* hidden h1 section values*/
@@ -133,15 +149,39 @@ textarea {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media only screen and (min-width: 768px) {
+  .header-container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+  }
 }
 
 .nav {
   display: flex;
   align-items: center;
+  /* flex-grow: 1; */
+  justify-content: space-between;
+}
+
+.nav-mobile {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+@media not (hover: hover) {
+  .nav-mobile:active .nav-mobile-icon {
+    fill: #404bbf;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .nav-mobile {
+    display: none;
+  }
 }
 
 .logo {
@@ -155,8 +195,20 @@ textarea {
 }
 
 .header-logo {
-  padding: 24px 0;
-  margin-right: 76px;
+  padding: 16px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .header-logo {
+    margin-right: 76px;
+  }
 }
 
 .logo .light {
@@ -166,6 +218,12 @@ textarea {
 .nav-list {
   display: flex;
   gap: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-list {
+    display: none;
+  }
 }
 
 .nav-link {
@@ -198,18 +256,40 @@ textarea {
 
 .address {
   font-style: normal;
-  /* margin-left: auto; */
+  margin-left: auto;
 }
 
-.address-list {
-  display: flex;
-  gap: 40px;
+@media only screen and (max-width: 767px) {
+  .address {
+    display: none;
+  }
 }
 
-.address-link {
-  color: #434455;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media only screen and (min-width: 1158px) {
+  .address-list {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media only screen and (min-width: 758px) {
+  .address-link {
+    color: #434455;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .address-link {
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
 }
 
 .nav-link:hover,
