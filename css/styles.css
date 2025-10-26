@@ -76,7 +76,7 @@ textarea {
   outline: 2px solid red;
   outline-offset: -2px;
 
-  min-width: 320px;
+  /* min-width: 320px; */
 
   max-width: 375px;
 }
@@ -320,30 +320,81 @@ textarea {
 /* #region HERO */
 .hero {
   background-color: #2e2f42;
-  padding-top: 188px;
-  padding-bottom: 188px;
-
-  max-width: 1440px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-people.jpg);
+    url(../images/mobile/hero-mobile-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
+  /* min-width: 320px; */
+  max-width: 375px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/tablet/hero-tablet-bg.jpg');
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-people.jpg);
+    max-width: 1440px;
+  }
+}
+
+.hero-container {
+  padding: 72px 52px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-container {
+    padding: 112px 0;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero-container {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
 }
 
 .hero-title {
-  max-width: 496px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   text-align: center;
   color: #ffffff;
-  letter-spacing: 0.02em;
-  margin: 0 auto 48px auto;
+  max-width: 212px;
+  margin: 0 auto 72px auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+    margin: 0 auto 36px auto;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero-title {
+    margin: 0 auto 48px auto;
+  }
 }
 
 .hero-button,
