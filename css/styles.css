@@ -66,8 +66,15 @@ textarea {
 /* #region Commom */
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .container {
@@ -123,7 +130,6 @@ textarea {
 }
 
 /* Title h3 */
-.values-subtitle,
 .team-subtitle,
 .portfolio-subtitle {
   font-weight: 500;
@@ -136,10 +142,9 @@ textarea {
 }
 
 /* Text p */
-.values-text,
 .team-text,
 .portfolio-text {
-  color: #434455;
+  color: currentColor;
 }
 
 /* button-close-icon */
@@ -431,22 +436,80 @@ textarea {
 /* #region Our Values */
 .values-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
-.values-item {
-  width: calc((100% - 3 * 24px) / 4);
+@media only screen and (min-width: 768px) {
+  .values-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
 }
 
-.values-tumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  background-color: #f4f4fd;
+@media only screen and (min-width: 1158px) {
+  .values-list {
+    gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .values-item {
+    width: calc((100% - 1 * 24px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .values-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+}
+
+@media only screen and (max-width: 1157px) {
+  .values-tumb {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .values-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    margin-bottom: 8px;
+    height: 112px;
+  }
+}
+
+.values-subtitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  color: #2e2f42;
   margin-bottom: 8px;
-  height: 112px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .values-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.values-text {
+  color: currentColor;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 1158px) {
+  .values-text {
+    font-weight: 400;
+  }
 }
 /* #endregion Our Values */
 
