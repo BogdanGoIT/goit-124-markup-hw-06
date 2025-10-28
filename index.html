@@ -149,6 +149,7 @@
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="team-content">
                 <h3 class="team-subtitle">Mark Guerrero</h3>
@@ -217,6 +218,7 @@
                 alt="Tom Ford"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="team-content">
                 <h3 class="team-subtitle">Tom Ford</h3>
@@ -288,6 +290,7 @@
                 alt="Camila Garcia"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="team-content">
                 <h3 class="team-subtitle">Camila Garcia</h3>
@@ -359,6 +362,7 @@
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="team-content">
                 <h3 class="team-subtitle">Daniel Wilson</h3>
@@ -430,12 +434,38 @@
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <div class="portfolio-wrapper">
-                <img
-                  class="portfolio-img"
-                  src="./images/banking-app.jpg"
-                  alt="Banking App"
-                  width="360"
-                />
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/desktop/banking-app.jpg    1x,
+                      ./images/portfolio/desktop/banking-app@2x.jpg 2x
+                    "
+                  />
+                  <!-- Tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/tablet/banking-app_tab.jpg    1x,
+                      ./images/portfolio/tablet/banking-app_tab@2x.jpg 2x
+                    "
+                  />
+                  <!-- Mobile -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio/mobile/banking-app_mob.jpg,
+                      ./images/portfolio/mobile/banking-app_mob@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="portfolio-img"
+                    src="./images/portfolio/mobile/banking-app_mob.jpg"
+                    alt="Banking App"
+                    width="360"
+                  />
+                </picture>
                 <p class="portfolio-owerlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
