@@ -334,6 +334,7 @@ textarea {
   margin: 0 auto;
   /* min-width: 320px; */
   max-width: 375px;
+  padding: 72px 52px;
 }
 
 @media (min-resolution: 192dpi) {
@@ -354,6 +355,7 @@ textarea {
       ),
       url('../images/hero/bg_m.jpg');
     max-width: 768px;
+    padding: 112px 0;
   }
 
   @media (min-resolution: 192dpi) {
@@ -375,6 +377,7 @@ textarea {
       ),
       url(../images/hero/bg_l.jpg);
     max-width: 1440px;
+    padding: 188px 0;
   }
 
   @media (min-resolution: 192dpi) {
@@ -388,30 +391,12 @@ textarea {
   }
 }
 
-.hero-container {
-  padding: 72px 52px;
-}
-
-@media only screen and (min-width: 768px) {
-  .hero-container {
-    padding: 112px 0;
-  }
-}
-
-@media only screen and (min-width: 1158px) {
-  .hero-container {
-    padding-top: 188px;
-    padding-bottom: 188px;
-  }
-}
-
 .hero-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   color: #ffffff;
-  max-width: 212px;
   margin: 0 auto 72px auto;
 }
 
