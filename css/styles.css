@@ -705,28 +705,30 @@ textarea {
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 108px;
     gap: 72px 24px;
+  }
+}
+
+@media only screen and (max-width: 1157px) {
+  .footer-container {
+    max-width: 528px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .footer-container {
     gap: unset;
-    padding: 0 15px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .footer-brand {
-    flex-grow: 1;
+    margin-right: auto;
   }
 }
 
 .footer-logo {
   display: block;
-  text-align: center;
-  /* display: inline-block; */
   margin-bottom: 16px;
 }
 
@@ -744,14 +746,13 @@ textarea {
   color: #fff;
   font-weight: 500;
   margin-bottom: 16px;
-  text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
   .footer-logo,
   .footer-socials-text,
   .footer-form-text {
-    text-align: left;
+    text-align: center;
   }
 }
 
